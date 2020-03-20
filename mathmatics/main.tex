@@ -1,0 +1,60 @@
+\documentclass[uplatex]{jsarticle}
+\usepackage{listings, plistings, theorem, bm, amsmath, amssymb}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex,
+}
+\renewcommand{\lstlistingname}{ソースコード}
+
+\theorembodyfont{\normalfont}
+\newtheorem{definition}{定義}
+\newtheorem{theorem}{定理}
+
+\title{情報理工学系研究科 院試数学}
+\author{mqcmd196}
+
+\begin{document}
+\section{線形代数}
+
+\subsection{諸知識}
+
+\subsection{ベクトル空間，写像，同型}
+\begin{definition}
+    \label{def:1次独立と1次従属}
+    1次独立と1次従属\\
+    ベクトルの組$\bm{a_1}, \bm{a_2}, ..., \bm{a_m}$について，1次関係$$c_1\bm{a_1} + c_2\bm{a_2}, ..., c_m\bm{a_m} = \bm{0} \, (c_i \in \mathbb{R})$$が成り立つのは，自明な1次関係つまり，$c_1 = c_2 = ... = c_m = 0$の場合のみのとき，$\bm{a_1}, \bm{a_2}, ..., \bm{a_m}$は1次独立であるという．また1次独立でないとき，すなわち$$c_1\bm{a_1} + c_2\bm{a_2}, ..., c_m\bm{a_m} = \bm{0}$$をみたす$c_1, c_2, ..., c_m$で，そのうちの少なくとも1つが0でないものが存在するとき，1次従属であるという．
+\end{definition}
+
+\begin{definition}
+    部分空間\\
+    ベクトル空間$V$の空でない部分集合$W$が，$V$における和とスカラー倍の演算によってベクトル空間になるとき，$W$を$V$の部分空間という．
+\end{definition}
+
+\begin{theorem}
+    ベクトル空間$V$の部分集合$W$が部分空間であるための必要十分条件
+    \begin{enumerate}
+        \item $W \neq \phi$
+        \item 任意の$\bm{a}, \bm{b} \in W$と任意の$\lambda, \mu \in \mathbb{R}$に対して$\lambda\bm{a} + \mu\bm{b} \in W$
+    \end{enumerate}
+\end{theorem}
+
+\begin{definition}
+    像空間と核空間\\
+    $V, W$を2つのベクトル空間，$f:V \to W$を線形写像とするとき，$${\rm Im} f = \{f(\bm{x}) | \bm{x} \in V\}$$を$f$の像空間，$${\rm Ker} f = \{\bm{x} \in V | f(\bm{x}) = \bm{0}\}$$を$f$の核空間という．
+\end{definition}
+
+\end{document}
